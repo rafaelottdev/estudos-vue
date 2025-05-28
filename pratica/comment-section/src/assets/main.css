@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+    list-style: none;
+
+    border: none;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #048C7F;
+    overflow-x: hidden;
+}
