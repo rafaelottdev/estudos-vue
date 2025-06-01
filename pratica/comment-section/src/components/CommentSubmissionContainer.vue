@@ -1,16 +1,21 @@
 <template>
     <section>
         <div>
-            <input type="text">
-            <textarea></textarea>
-            <button>Comentar</button>
+            <input type="text" :onchange="getNameValue" >
+            <textarea :onchange="getCommentValue"></textarea>
+            <button :onclick="sendComment">Comentar</button>
         </div>
     </section>
 </template>
 
 <script>
     export default {
-        name: "CommentSubmissionContainer"
+        name: "CommentSubmissionContainer",
+        props: {
+            getNameValue: Function,
+            getCommentValue: Function,
+            sendComment: Function
+        }
     }
 </script>
 
@@ -48,6 +53,8 @@
 
     div > button {
         height: 50px;
+
+        margin-bottom: 25px;
 
         font-size: 1.2em;
         font-weight: bold;

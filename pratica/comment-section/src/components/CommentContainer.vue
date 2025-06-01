@@ -2,7 +2,10 @@
     <section>
         <div>
             <ul>
-                
+                <li v-for="(comment, index) in commentList" :key="index">
+                    <p>{{ comment.name }}</p>
+                    <p>{{ comment.comment }}</p>
+                </li>
             </ul>
         </div>
     </section>
@@ -10,7 +13,10 @@
 
 <script>
     export default {
-        name: "CommentContainer"
+        name: "CommentContainer",
+        props: {
+            commentList: Array
+        }
     }
 </script>
 
@@ -30,9 +36,27 @@
         padding: 25px;
 
         border-radius: 30px;
-        overflow: hidden;
+
+        overflow-wrap: break-word;
 
         color: white;
         background-color: #0C1A26;
+    }
+
+    li {
+        margin-bottom: 20px;
+    }
+
+    li > p:first-child {
+        margin-bottom: 5px;
+        padding: 3px 5px;
+
+        display: inline-block;
+        border-radius: 5px;
+
+        font-size: .8em;
+        letter-spacing: 1px;
+
+        background-color: rgba(0, 0, 0, 0.364);
     }
 </style>
