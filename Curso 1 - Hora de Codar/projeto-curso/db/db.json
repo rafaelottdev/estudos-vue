@@ -65,17 +65,28 @@
   },
   "status": [
     {
-      "id": 1,
+      "id": "1",
       "tipo": "Solicitado"
     },
     {
-      "id": 2,
+      "id": "2",
       "tipo": "Em produção"
     },
     {
-      "id": 3,
+      "id": "3",
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burguers": [
+    {
+      "id": "1259",
+      "nome": "fagundes",
+      "carne": "Veggie burger",
+      "pao": "Integral",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Em produção"
+    }
+  ]
 }
